@@ -126,7 +126,7 @@ jobs:
         if: |
           github.ref_name == 'main' &&
           github.event_name == 'push' &&
-          github.repository == 'illusion0001/PS4-PS5-Game-Patch'
+          github.repository == 'illusionyy/PS4-PS5-Game-Patch'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -149,16 +149,16 @@ jobs:
         if: |
           github.ref_name == 'main' &&
           github.event_name == 'push' &&
-          github.repository == 'illusion0001/PS4-PS5-Game-Patch'
+          github.repository == 'illusionyy/PS4-PS5-Game-Patch'
         uses: actions/checkout@main
         with:
-          repository: illusion0001/illusion0001.github.io
+          repository: illusionyy/legacy-website
 
       - name: Run Website Workflow dispatch
         if: |
           github.ref_name == 'main' &&
           github.event_name == 'push' &&
-          github.repository == 'illusion0001/PS4-PS5-Game-Patch'
+          github.repository == 'illusionyy/PS4-PS5-Game-Patch'
         env:
           GITHUB_TOKEN: ${{ secrets.WORKFLOW_RUNNER }}
         run: gh workflow run jekyll.yml
